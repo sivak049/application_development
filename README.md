@@ -1,5 +1,3 @@
-Sure, here is the `README.md` in markdown format without code snippets:
-
 ---
 
 # Simple User Search App
