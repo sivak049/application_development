@@ -27,11 +27,10 @@ Ensure you have the following installed on your machine:
 │   ├── index.html
 │   └── package.json    # Dependencies for frontend
 │
-├── /server             # Backend (Express.js)
-│   ├── index.js
-│   └── package.json    # Dependencies for backend
+├── server.js             # Backend (Express.js)
+├── package.json    # Dependencies for backend
 │
-├── /images             # Folder for profile pictures (jpg, png)
+├── setup.sql
 │
 └── README.md
 ```
@@ -40,8 +39,8 @@ Ensure you have the following installed on your machine:
 
 ### 1. Clone the Project
 First, clone the repository to your local machine:
-- `git clone https://github.com/your-username/your-repo.git`
-- `cd your-repo`
+- `git clone https://github.com/sivak049/application_development.git`
+- `cd my-app`
 
 ### 2. Setting up the Database (PostgreSQL)
 
@@ -51,9 +50,9 @@ First, clone the repository to your local machine:
 
 #### Create the Database
 - Log into PostgreSQL and create the `my_app` database and `users` table.
-
-#### Insert Dummy Data
-- Insert some dummy users into the database.
+- ie. go to bash and type:
+    -  psql -U postgres -c "CREATE DATABASE my_app;"
+    -  psql -U postgres -d my_app -f ./setup.sql
 
 #### Upload Profile Pictures
 - Place the profile pictures for your test users in the `/images` directory. Ensure the filenames match those specified in the `profile_picture` field in the database.
@@ -61,10 +60,11 @@ First, clone the repository to your local machine:
 ### 3. Backend Setup (Express.js)
 
 #### Install Backend Dependencies
-- Navigate to the `server` directory and install the required dependencies.
+- Navigate to the top directory and install the required dependencies.
 
 #### Start the Backend Server
-- Start the backend server.
+- Start the backend server by going to top directory with terminal and typing
+  node server.js
 
 ### 4. Frontend Setup (React + Vite)
 
@@ -72,7 +72,7 @@ First, clone the repository to your local machine:
 - Navigate to the `client` directory and install the dependencies.
 
 #### Start the Frontend
-- Start the frontend.
+- Start the frontend by typing: npm start
 
 ### 5. Testing the App
 - Visit `http://localhost:3000`.
