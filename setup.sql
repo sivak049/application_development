@@ -1,9 +1,3 @@
--- Create the database if it doesn't exist
-CREATE DATABASE my_app;
-
--- Connect to the database
-\c my_app;
-
 -- Create the users table
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
